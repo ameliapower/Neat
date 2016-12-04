@@ -4,7 +4,7 @@
  *
  * @package Neat
  */
-
+echo 'hello from index.php';
 get_header(); ?>
 
 

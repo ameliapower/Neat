@@ -13,6 +13,24 @@ This theme, like WordPress, is licensed under the GPL.
 Neat is distributed under the terms of the GNU GPL v2 or later.
 */
 
+
+
+//compass imports
+@import "compass";
+// @import "compass/reset"; //browser resets for margin padding etc, Eric Mey Reset stuff
+// @import "compass/css3/flexbox";
+// @import "compass/css3/box-shadow";
+// @import "compass/css3/transition";
+// @import "compass/css3/transform";
+// @import "compass/typography/text/replacement";
+// @import "compass/css3/box-sizing";
+// @import "compass/css3/text-shadow";
+
+//external libraries
+@import "susy";
+@import "breakpoint";
+
+
 /* ----------------------------------------------------------------------------
  * Mixins & Variables
  * ------------------------------------------------------------------------- */
@@ -21,14 +39,35 @@ Neat is distributed under the terms of the GNU GPL v2 or later.
 
 /* ----------------------------------------------------------------------------
  * Normalize & Santize
- * ------------------------------------------------------------------------- */
+ // * ------------------------------------------------------------------------- */
 @import "vendor/normalize";
 @import "vendor/sanitize";
+
+/* ----------------------------------------------------------------------------
+ * Vendors
+ * ------------------------------------------------------------------------- */
+// @import "vendor/jquery-ui-min"; 
 
 /* ----------------------------------------------------------------------------
  * Structure
  * ------------------------------------------------------------------------- */
 @import "partials/structure";
+// @import "partials/basic";
+
+/* ----------------------------------------------------------------------------
+ * Modules
+ * ------------------------------------------------------------------------- */
 
 /* WPCore */
 @import "partials/wpcore";
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+/*
+Error: File to import not found or unreadable: vendor/normalize.
+       Load paths:
+         /Users/powerame/Dev/Neat/assets/css
+         /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets
+         /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass
+         /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sassy-maps-0.4.0/sass
+         /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/breakpoint-2.7.0/stylesheets
+         Compass::SpriteImporter
+        on line 43 of /Users/powerame/Dev/Neat/assets/css/style.scss
+
+38: @import "partials/variables";
+39: 
+40: /* ----------------------------------------------------------------------------
+41:  * Normalize & Santize
+42:  // * ------------------------------------------------------------------------- *\/
+43: @import "vendor/normalize";
+44: @import "vendor/sanitize";
+45: 
+46: /* ----------------------------------------------------------------------------
+47:  * Vendors
+48:  * ------------------------------------------------------------------------- *\/
+
+Backtrace:
+/Users/powerame/Dev/Neat/assets/css/style.scss:43
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `call'
+/Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Users/powerame/.rbenv/versions/2.2.0/bin/compass:23:in `load'
+/Users/powerame/.rbenv/versions/2.2.0/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: vendor/normalize.\A        Load paths:\A          /Users/powerame/Dev/Neat/assets/css\A          /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets\A          /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass\A          /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/sassy-maps-0.4.0/sass\A          /Users/powerame/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/breakpoint-2.7.0/stylesheets\A          Compass::SpriteImporter\A         on line 43 of /Users/powerame/Dev/Neat/assets/css/style.scss\A \A 38: @import \"partials/variables\";\A 39: \A 40: /* ----------------------------------------------------------------------------\A 41:  * Normalize & Santize\A 42:  // * ------------------------------------------------------------------------- */\A 43: @import \"vendor/normalize\";\A 44: @import \"vendor/sanitize\";\A 45: \A 46: /* ----------------------------------------------------------------------------\A 47:  * Vendors\A 48:  * ------------------------------------------------------------------------- */"; }

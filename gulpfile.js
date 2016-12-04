@@ -10,7 +10,7 @@
 
 // Project configuration
 var project 		= 'neat', // Project name, used for build zip.
-	url 			= 'neat.dev', // Local Development URL for BrowserSync. Change as-needed.
+	url 			= 'neat.local.dev', // Local Development URL for BrowserSync. Change as-needed.
 	bower 			= './assets/bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 	build 			= './buildtheme/', // Files that you want to package into a zip go here
 	buildInclude 	= [
@@ -52,8 +52,9 @@ var project 		= 'neat', // Project name, used for build zip.
 		rename       = require('gulp-rename'),
 		concat       = require('gulp-concat'),
 		notify       = require('gulp-notify'),
-		cmq          = require('gulp-combine-media-queries'),
+		mmq          = require('gulp-merge-media-queries'),
 		runSequence  = require('gulp-run-sequence'),
+		compass      = require('gulp-compass'),
 		sass         = require('gulp-sass'),
 		plugins      = require('gulp-load-plugins')({ camelize: true }),
 		ignore       = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
@@ -103,11 +104,13 @@ gulp.task('browser-sync', function() {
  *
  * Sass output styles: https://web-design-weekly.com/2014/06/15/different-sass-output-styles/
 */
-gulp.task('styles', function () {
+gulp.task('compass', function () {
 	return 	gulp.src('./assets/css/*.scss')
 				.pipe(plumber())
 				.pipe(sourcemaps.init())
-				.pipe(sass({
+				.pipe(compass({
+					sass: './assets/css',
+					require: ['susy', 'breakpoint'], //make sure to install susy and breakpoints
 					errLogToConsole: true,
 
 					//outputStyle: 'compressed',
@@ -123,7 +126,7 @@ gulp.task('styles', function () {
 				.pipe(plumber.stop())
 				.pipe(gulp.dest('./'))
 				.pipe(filter('**/*.css')) // Filtering stream to only css files
-				.pipe(cmq()) // Combines Media Queries
+				.pipe(mmq()) // Merge Media Queries
 				.pipe(reload({stream:true})) // Inject Styles when style file is created
 				.pipe(rename({ suffix: '.min' }))
 				.pipe(minifycss({
@@ -268,14 +271,14 @@ gulp.task('buildImages', function() {
 
  // Package Distributable Theme
  gulp.task('build', function(cb) {
- 	runSequence('styles', 'cleanup', 'vendorsJs', 'scriptsJs',  'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
+ 	runSequence('compass', 'cleanup', 'vendorsJs', 'scriptsJs',  'buildFiles', 'buildImages', 'buildZip','cleanupFinal', cb);
  });
 
 
  // Watch Task
- gulp.task('default', ['styles', 'vendorsJs', 'scriptsJs', 'images', 'browser-sync'], function () {
+ gulp.task('default', ['compass', 'vendorsJs', 'scriptsJs', 'images', 'browser-sync'], function () {
  	gulp.watch('./assets/img/raw/**/*', ['images']); //Some issue, have to run manual for now
- 	gulp.watch('./assets/css/**/*.scss', ['styles']);
+ 	gulp.watch('./assets/css/**/*.scss', ['compass']);
  	gulp.watch('./assets/js/**/*.js', ['scriptsJs', browserSync.reload]);
 
  });
